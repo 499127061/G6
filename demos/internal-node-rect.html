@@ -12,31 +12,7 @@
   <script src="../build/g6.js"></script>
   <script>
 
-    G6.registerNode('selfCircle', {
-      drawShape(cfg, group) {
-        const style = this.getShapeStyle(cfg)
-        debugger
-        console.log(style)
-        const keyShape = group.addShape('circle', {
-          attrs: style
-        })
-        return keyShape
-      },
-      afterDraw(cfg, group) {
-        const shape = group.addShape('rect', {
-          attrs: {
-            x: 0,
-            y: 0,
-            width: 20,
-            height: 30,
-            fill: 'blue'
-          }
-        })
-        return shape
-      }
-    }, 'circle')
-
-let nodes = []
+    let nodes = []
     for(let i = 0; i < 500; i++) {
       nodes.push({
         id: `node-${i}`,
